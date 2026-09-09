@@ -4,7 +4,7 @@ set -euo pipefail
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
-python - <<'PY'
+python3 - <<'PY'
 import json
 from pathlib import Path
 
@@ -18,7 +18,7 @@ workspace = manifest.get("workspace", {})
 course = manifest.get("course", {})
 required = ["CMakeLists.txt", "sdkconfig.defaults", "main/CMakeLists.txt", "main/main.c"]
 missing = [path for path in required if not (root / path).is_file()]
-siblings = sorted(path.name for path in root.glob("course-*") if path.is_dir())
+siblings = sorted(path.name for path in root.glob("course-*") if path.is_dir() and any(path.iterdir()))
 protected = sorted(
     str(path.relative_to(root))
     for path in root.rglob("*")
