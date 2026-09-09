@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+"$(git rev-parse --show-toplevel)/tools/workspace-doctor.sh"
+
 if [[ -n "${IDF_PATH:-}" && -f "$IDF_PATH/export.sh" ]]; then
   # shellcheck disable=SC1090
   . "$IDF_PATH/export.sh" >/dev/null 2>&1

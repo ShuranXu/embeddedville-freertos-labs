@@ -2,7 +2,12 @@
   "name": "EmbeddedVille Course 4 · ESP-IDF 6.0.3 + QEMU",
   "image": "espressif/idf:v6.0.3",
   "remoteUser": "root",
-  "postCreateCommand": "python \"$IDF_PATH/tools/idf_tools.py\" --non-interactive install qemu-xtensa",
+  "postCreateCommand": "python \"$IDF_PATH/tools/idf_tools.py\" --non-interactive install qemu-xtensa && tools/workspace-doctor.sh",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
   "customizations": {
     "vscode": {
       "extensions": ["ms-vscode.cpptools"]
