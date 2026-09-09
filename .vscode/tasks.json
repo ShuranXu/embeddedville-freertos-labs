@@ -2,24 +2,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build and run Course 1",
+      "label": "Build and run this course",
       "type": "shell",
-      "command": "tools/build-and-run.sh course-1-tasking",
+      "command": "tools/build-and-run.sh",
       "problemMatcher": []
-    },
-    {
-      "label": "Build and run selected course",
-      "type": "shell",
-      "command": "tools/build-and-run.sh ${input:course}",
-      "problemMatcher": []
-    }
-  ],
-  "inputs": [
-    {
-      "id": "course",
-      "type": "pickString",
-      "description": "Course starter",
-      "options": ["course-1-tasking", "course-2-communication", "course-3-pipelines", "course-4-reliability"]
     }
   ]
 }

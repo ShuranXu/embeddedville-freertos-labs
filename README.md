@@ -1,33 +1,18 @@
-# EmbeddedVille FreeRTOS browser labs
+# Course 4 — FreeRTOS Reliability and Low-Power Systems
 
-These are starter-only ESP-IDF v6.0.3 projects for the four independent
-EmbeddedVille FreeRTOS courses. Open this repository in GitHub Codespaces, choose
-the matching course directory, and implement the TODOs from its project brief.
+Build a supervised sleep-aware sensor hub using simulated inputs. QEMU can prove
+scheduler and application behavior, but it cannot prove current consumption or
+physical sleep behavior; keep that boundary explicit in your engineering answer.
 
-| Course | Starter directory | Culminating project |
-| --- | --- | --- |
-| 1 | `course-1-tasking` | Deterministic Dual-LED Controller (logical outputs in QEMU) |
-| 2 | `course-2-communication` | Interrupt-Driven UART Event Logger |
-| 3 | `course-3-pipelines` | Event-Driven Telemetry Pipeline |
-| 4 | `course-4-reliability` | Resilient Sleep-Aware Sensor Hub |
+This Codespaces branch contains only the Course 4 starter. The other independent
+FreeRTOS courses are intentionally excluded from this workspace.
 
-## Use the browser lab
+## Build and run
 
-1. Create a Codespace from this repository.
-2. In the terminal, run `tools/build-and-run.sh course-1-tasking` (replace the
-   directory for your course).
-3. Edit `main/main.c`, rebuild, and inspect the serial evidence.
-4. Download or archive only the chosen course directory and submit it through
-   EmbeddedVille Learn.
+1. Open `main/main.c` and implement the TODOs for the current EmbeddedVille lab.
+2. Run `tools/build-and-run.sh` from the repository root.
+3. Capture the requested serial evidence from the same source revision.
 
-The local helper runs a public smoke simulation. The scored review is separate:
-a credential-free GitHub Actions job compiles and inspects your submitted source,
-then a protected job receives only the compiled firmware and runs a private QEMU
-scenario. Reference solutions are not stored here.
-
-## Scope
-
-These labs validate FreeRTOS code structure and behavior in Espressif QEMU. They
-do not validate electrical behavior, real sensors, radio links, sleep current, or
-physical ESP32 hardware.
+The helper performs a public smoke simulation. Scored evaluation remains in
+EmbeddedVille Learn and uses the source archive submitted for this course.
 
