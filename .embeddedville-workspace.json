@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "provider": "github-codespaces",
+  "course": {
+    "number": 2,
+    "code": "C2",
+    "id": "freertos-communication-synchronization",
+    "title": "FreeRTOS Communication and Synchronization"
+  },
+  "workspace": {
+    "repository": "ShuranXu/embeddedville-freertos-labs",
+    "branch": "course-2-communication",
+    "starterVersion": "2026.9.1",
+    "devContainerPath": ".devcontainer/devcontainer.json",
+    "workingDirectory": "."
+  },
+  "activityScope": ["final-project"]
+}
