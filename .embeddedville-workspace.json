@@ -6,19 +6,19 @@
     "title": "FreeRTOS Reliability and Low-Power Systems"
   },
   "activity": {
-    "id": "c4-project",
-    "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Resilient Sleep-Aware Sensor Hub"
+    "id": "c4-day-25-system-integration",
+    "kind": "lab",
+    "dayLabel": "Day 25",
+    "title": "System integration"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-4-reliability",
-    "starterVersion": "2026.9.1",
+    "branch": "course-4-day-25-system-integration",
+    "starterVersion": "2026.9.2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c4-project"
+    "c4-day-25-system-integration"
   ]
 }

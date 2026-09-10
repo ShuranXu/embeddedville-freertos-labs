@@ -1,15 +1,13 @@
 #include <stdio.h>
-#include "esp_idf_version.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
-#include "esp_pm.h"
-#include "esp_task_wdt.h"
+#include "freertos/event_groups.h"
+#include "freertos/semphr.h"
 
 void app_main(void)
 {
-    printf("EVIDENCE boot idf=%s\n", IDF_VER);
-    /* TODO: build the supervised producer/consumer sensor-hub task graph. */
-    /* TODO: configure an explicit power policy and track useful progress. */
+    printf("EVIDENCE item=c4-day-25-system-integration status=starter\n");
+    /* TODO: Integrate typed samples, state, signaling, supervision, and protected output. */
+    /* Emit status=pass only after every published acceptance check succeeds. */
 }
-
