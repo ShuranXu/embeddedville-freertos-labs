@@ -1,8 +1,8 @@
-# Interrupt-Driven UART Event Logger
+# UART event logger
 
-Final project · FreeRTOS Communication and Synchronization
+Day 14 · FreeRTOS Communication and Synchronization
 
-This isolated Codespace contains only the starter for this project. Open `main/main.c`, complete the published activity contract, and preserve the requested serial evidence. No solutions, sibling activities, protected scenarios, credentials, or secrets are included.
+This isolated Codespace contains only the starter for this lab. Open `main/main.c`, complete the published activity contract, and preserve the requested serial evidence. No solutions, sibling activities, protected scenarios, credentials, or secrets are included.
 
 ## Build and run
 
@@ -15,10 +15,10 @@ The helper builds with ESP-IDF v6.0.3 and runs a public QEMU smoke check. Scored
 ## Workspace identity
 
 - Topic: **FreeRTOS Communication and Synchronization**
-- Activity: **Final project — Interrupt-Driven UART Event Logger**
+- Activity: **Day 14 — UART event logger**
 - Repository: `ShuranXu/embeddedville-freertos-labs`
-- Branch: `course-2-communication`
-- Starter version: `2026.9.1`
+- Branch: `course-2-day-14-uart-logger`
+- Starter version: `2026.9.2`
 - Working directory: repository root
 
 Run `tools/workspace-doctor.sh` whenever you are unsure which workspace is open. A wrong branch cannot be used for this activity; preserve your edits, then create or resume the matching activity workspace from EmbeddedVille Learn.
