@@ -6,19 +6,19 @@
     "title": "FreeRTOS Communication and Synchronization"
   },
   "activity": {
-    "id": "c2-project",
-    "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Interrupt-Driven UART Event Logger"
+    "id": "c2-day-8-queue-backpressure",
+    "kind": "lab",
+    "dayLabel": "Day 8",
+    "title": "Queue backpressure"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-2-communication",
-    "starterVersion": "2026.9.1",
+    "branch": "course-2-day-08-queue-backpressure",
+    "starterVersion": "2026.9.2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c2-project"
+    "c2-day-8-queue-backpressure"
   ]
 }
