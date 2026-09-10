@@ -1,5 +1,5 @@
 {
-  "name": "Event-Driven Telemetry Pipeline · ESP-IDF 6.0.3 + QEMU",
+  "name": "Stream and message buffers · ESP-IDF 6.0.3 + QEMU",
   "image": "espressif/idf:v6.0.3",
   "remoteUser": "root",
   "postCreateCommand": "python \"$IDF_PATH/tools/idf_tools.py\" --non-interactive install qemu-xtensa && tools/workspace-doctor.sh",

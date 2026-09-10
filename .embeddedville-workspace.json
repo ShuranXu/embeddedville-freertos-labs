@@ -6,19 +6,19 @@
     "title": "FreeRTOS Event and Resource Pipelines"
   },
   "activity": {
-    "id": "c3-project",
-    "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Event-Driven Telemetry Pipeline"
+    "id": "c3-day-17-stream-message-buffers",
+    "kind": "lab",
+    "dayLabel": "Day 17",
+    "title": "Stream and message buffers"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-3-pipelines",
-    "starterVersion": "2026.9.1",
+    "branch": "course-3-day-17-stream-message-buffers",
+    "starterVersion": "2026.9.2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c3-project"
+    "c3-day-17-stream-message-buffers"
   ]
 }
