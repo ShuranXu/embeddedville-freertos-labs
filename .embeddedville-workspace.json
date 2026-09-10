@@ -6,19 +6,19 @@
     "title": "FreeRTOS Communication and Synchronization"
   },
   "activity": {
-    "id": "c2-project",
-    "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Interrupt-Driven UART Event Logger"
+    "id": "c2-day-9-isr-queue-handoff",
+    "kind": "lab",
+    "dayLabel": "Day 9",
+    "title": "ISR queue handoff"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-2-communication",
-    "starterVersion": "2026.9.1",
+    "branch": "course-2-day-09-isr-queue-handoff",
+    "starterVersion": "2026.9.2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c2-project"
+    "c2-day-9-isr-queue-handoff"
   ]
 }
