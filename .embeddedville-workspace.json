@@ -1,11 +1,15 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
-    "number": 4,
-    "code": "C4",
     "id": "freertos-reliability-low-power",
     "title": "FreeRTOS Reliability and Low-Power Systems"
+  },
+  "activity": {
+    "id": "c4-project",
+    "kind": "project",
+    "dayLabel": "Final project",
+    "title": "Resilient Sleep-Aware Sensor Hub"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
@@ -14,5 +18,7 @@
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
-  "activityScope": ["final-project"]
+  "activityScope": [
+    "c4-project"
+  ]
 }
