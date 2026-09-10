@@ -1,15 +1,11 @@
 #include <stdio.h>
-#include "esp_idf_version.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "freertos/timers.h"
-#include "freertos/event_groups.h"
-#include "freertos/message_buffer.h"
+#include "freertos/queue.h"
 
 void app_main(void)
 {
-    printf("EVIDENCE boot idf=%s\n", IDF_VER);
-    /* TODO: combine event bits, direct notifications, and message buffers. */
-    /* TODO: keep timer callbacks bounded and log heap/runtime evidence. */
+    printf("EVIDENCE item=c3-day-20-interrupt-management status=starter\n");
+    /* TODO: Compare queue and direct-notification handoffs with equivalent deterministic events. */
+    /* Emit status=pass only after every published acceptance check succeeds. */
 }
-
