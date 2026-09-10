@@ -1,11 +1,15 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
-    "number": 1,
-    "code": "C1",
     "id": "freertos-tasking-foundations",
     "title": "FreeRTOS Tasking Foundations"
+  },
+  "activity": {
+    "id": "c1-project",
+    "kind": "project",
+    "dayLabel": "Final project",
+    "title": "Deterministic Dual-LED Controller"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
@@ -14,5 +18,7 @@
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
-  "activityScope": ["days-1-7", "final-project"]
+  "activityScope": [
+    "c1-project"
+  ]
 }
