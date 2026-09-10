@@ -1,5 +1,5 @@
 {
-  "name": "EmbeddedVille Course 2 · ESP-IDF 6.0.3 + QEMU",
+  "name": "Interrupt-Driven UART Event Logger · ESP-IDF 6.0.3 + QEMU",
   "image": "espressif/idf:v6.0.3",
   "remoteUser": "root",
   "postCreateCommand": "python \"$IDF_PATH/tools/idf_tools.py\" --non-interactive install qemu-xtensa && tools/workspace-doctor.sh",
@@ -10,8 +10,9 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["ms-vscode.cpptools"]
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
     }
   }
 }
-
