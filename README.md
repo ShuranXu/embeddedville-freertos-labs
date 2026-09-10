@@ -1,8 +1,8 @@
-# Resilient Sleep-Aware Sensor Hub
+# Power policy
 
-Final project · FreeRTOS Reliability and Low-Power Systems
+Day 24 · FreeRTOS Reliability and Low-Power Systems
 
-This isolated Codespace contains only the starter for this project. Open `main/main.c`, complete the published activity contract, and preserve the requested serial evidence. No solutions, sibling activities, protected scenarios, credentials, or secrets are included.
+This isolated Codespace contains only the starter for this lab. Open `main/main.c`, complete the published activity contract, and preserve the requested serial evidence. No solutions, sibling activities, protected scenarios, credentials, or secrets are included.
 
 ## Build and run
 
@@ -15,10 +15,10 @@ The helper builds with ESP-IDF v6.0.3 and runs a public QEMU smoke check. Scored
 ## Workspace identity
 
 - Topic: **FreeRTOS Reliability and Low-Power Systems**
-- Activity: **Final project — Resilient Sleep-Aware Sensor Hub**
+- Activity: **Day 24 — Power policy**
 - Repository: `ShuranXu/embeddedville-freertos-labs`
-- Branch: `course-4-reliability`
-- Starter version: `2026.9.1`
+- Branch: `course-4-day-24-power-policy`
+- Starter version: `2026.9.2`
 - Working directory: repository root
 
 Run `tools/workspace-doctor.sh` whenever you are unsure which workspace is open. A wrong branch cannot be used for this activity; preserve your edits, then create or resume the matching activity workspace from EmbeddedVille Learn.
