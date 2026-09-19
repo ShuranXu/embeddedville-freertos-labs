@@ -66,19 +66,10 @@ jobs:
             idf.py build &&
             python "$IDF_PATH/tools/idf_tools.py" --non-interactive install qemu-xtensa &&
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
-            (cd build && python -m esptool --chip=esp32 merge-bin
-            --output=qemu_flash.bin --pad-to-size=2MB @flash_args) &&
-            { qemu-system-xtensa -display none -monitor none -machine esp32
-            -drive file=build/qemu_flash.bin,if=mtd,format=raw
-            -serial tcp::5555,server=on,wait=on > qemu-process.log 2>&1 &
-            qemu_pid=$!;
-            sleep 1;
-            timeout --kill-after=5s 25s python -m serial.tools.miniterm
-            socket://localhost:5555 115200 2>&1 | tee qemu.log;
+            timeout --kill-after=5s 25s idf.py qemu 2>&1 | tee qemu.log;
             rc=${PIPESTATUS[0]};
-            kill "$qemu_pid" 2>/dev/null || true;
             { test "$rc" -eq 124 || test "$rc" -eq 137; } &&
-            grep -q "EVIDENCE" qemu.log; }
+            grep -q "EVIDENCE" qemu.log
 
       - name: Publish boot evidence
         if: always()
