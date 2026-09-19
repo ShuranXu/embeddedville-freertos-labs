@@ -6,6 +6,7 @@
 void app_main(void)
 {
     printf("EVIDENCE item=c3-day-18-software-timers status=starter\n");
+    fflush(stdout);
     /* TODO: Coordinate bounded one-shot and periodic callbacks, then stop deterministically. */
     /* Emit status=pass only after every published acceptance check succeeds. */
 }
