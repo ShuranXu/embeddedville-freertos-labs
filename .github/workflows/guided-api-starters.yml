@@ -68,9 +68,9 @@ jobs:
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
             (cd build && python -m esptool --chip=esp32 merge-bin
             --output=qemu_flash.bin --pad-to-size=2MB @flash_args) &&
-            qemu-system-xtensa -display none -monitor none -machine esp32
+            (qemu-system-xtensa -display none -monitor none -machine esp32
             -drive file=build/qemu_flash.bin,if=mtd,format=raw
-            -serial tcp::5555,server=on,wait=on > qemu-process.log 2>&1 &
+            -serial tcp::5555,server=on,wait=on > qemu-process.log 2>&1) &
             qemu_pid=$!;
             sleep 1;
             timeout --kill-after=5s 25s python -m serial.tools.miniterm
