@@ -9,6 +9,7 @@
 void app_main(void)
 {
     printf("EVIDENCE boot idf=%s\n", IDF_VER);
+    fflush(stdout);
     /* TODO: combine event bits, direct notifications, and message buffers. */
     /* TODO: keep timer callbacks bounded and log heap/runtime evidence. */
 }
