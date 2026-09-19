@@ -1,7 +1,7 @@
-# Deterministic Dual-LED Controller
+# Compare relative and absolute periodic delays
 
-Activity: `c1-project`  
-Branch: `course-1-tasking`  
+Activity: `c1-day-6-periodic-timing`  
+Branch: `course-1-day-06-periodic-timing`  
 Starter: `2026.9-guided-api-labs-v2`
 
 This branch contains only this activity's incomplete ESP-IDF 6.0.3 starter. Open `main/main.c`, complete the TODOs, then run `tools/build-and-run.sh`. Do not add credentials or copy a sibling activity or solution.
