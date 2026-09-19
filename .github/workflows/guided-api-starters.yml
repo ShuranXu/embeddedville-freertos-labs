@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 16
       matrix:
         branch:
           - course-1-tasking
