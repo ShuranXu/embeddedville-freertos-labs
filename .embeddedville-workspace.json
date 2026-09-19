@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 1,
+    "code": "C1",
     "id": "freertos-tasking-foundations",
     "title": "FreeRTOS Tasking Foundations"
   },
