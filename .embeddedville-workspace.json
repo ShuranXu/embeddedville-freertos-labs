@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 2,
+    "code": "C2",
     "id": "freertos-communication-synchronization",
     "title": "FreeRTOS Communication and Synchronization"
   },
@@ -14,7 +16,7 @@
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-2-day-13-priority-inheritance",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
