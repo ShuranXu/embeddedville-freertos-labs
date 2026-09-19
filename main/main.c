@@ -6,6 +6,7 @@
 void app_main(void)
 {
     printf("EVIDENCE boot idf=%s\n", IDF_VER);
+    fflush(stdout);
     /* TODO: create two independently periodic logical-output tasks. */
     /* TODO: report task creation, tick, level, and core evidence. */
 }
