@@ -68,8 +68,8 @@ jobs:
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
             (cd build && python -m esptool --chip=esp32 merge-bin
             --output=qemu_flash.bin --pad-to-size=2MB @flash_args) &&
-            printf 00000000000000000000000000800000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-            | xxd -r -p > build/qemu_efuse.bin &&
+            printf AAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+            | base64 -d > build/qemu_efuse.bin &&
             timeout --kill-after=5s 25s qemu-system-xtensa
             -M esp32 -m 4M
             -drive file=build/qemu_flash.bin,if=mtd,format=raw
