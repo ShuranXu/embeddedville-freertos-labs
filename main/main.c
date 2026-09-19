@@ -6,6 +6,7 @@
 void app_main(void)
 {
     printf("EVIDENCE item=c2-day-13-priority-inheritance status=starter\n");
+    fflush(stdout);
     /* TODO: Reproduce bounded contention and report the mutex owner's effective priority. */
     /* Emit status=pass only after every published acceptance check succeeds. */
 }
