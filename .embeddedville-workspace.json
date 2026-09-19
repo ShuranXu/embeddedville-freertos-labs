@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 3,
+    "code": "C3",
     "id": "freertos-event-resource-pipelines",
     "title": "FreeRTOS Event and Resource Pipelines"
   },
