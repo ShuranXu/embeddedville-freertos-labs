@@ -66,9 +66,9 @@ jobs:
             idf.py build &&
             python "$IDF_PATH/tools/idf_tools.py" --non-interactive install qemu-xtensa &&
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
-            timeout --signal=INT 25s idf.py qemu monitor 2>&1 | tee qemu.log;
+            timeout --kill-after=5s 25s idf.py qemu monitor 2>&1 | tee qemu.log;
             rc=${PIPESTATUS[0]};
-            test "$rc" -eq 124 &&
+            { test "$rc" -eq 124 || test "$rc" -eq 137; } &&
             grep -q "EVIDENCE" qemu.log
 
       - name: Publish boot evidence
