@@ -5,8 +5,7 @@
 
 void app_main(void)
 {
-    printf("EVIDENCE boot idf=%s\n", IDF_VER);
-    /* TODO: create two independently periodic logical-output tasks. */
-    /* TODO: report task creation, tick, level, and core evidence. */
+    printf("EVIDENCE item=c1-day-1-led-task status=starter idf=%s\n", IDF_VER);
+    /* TODO: Create one checked task, toggle one logical output, delay for 500 ms, and emit four timestamped transitions. */
+    /* Emit status=pass only after every published acceptance check succeeds. */
 }
-
