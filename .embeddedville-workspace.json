@@ -16,7 +16,7 @@
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-4-reliability",
-    "starterVersion": "2026.9.1",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
