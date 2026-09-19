@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 4,
+    "code": "C4",
     "id": "freertos-reliability-low-power",
     "title": "FreeRTOS Reliability and Low-Power Systems"
   },
@@ -9,12 +11,12 @@
     "id": "c4-days-29-30-sensor-hub-capstone",
     "kind": "lab",
     "dayLabel": "Days 29–30",
-    "title": "Resilient sensor-hub capstone"
+    "title": "Sensor hub capstone"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-4-days-29-30-sensor-hub-capstone",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
