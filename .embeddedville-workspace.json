@@ -8,19 +8,19 @@
     "title": "FreeRTOS Tasking Foundations"
   },
   "activity": {
-    "id": "c1-project",
-    "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Deterministic Dual-LED Controller"
+    "id": "c1-day-5-priority-change",
+    "kind": "lab",
+    "dayLabel": "Day 5",
+    "title": "Observe a task changing priority"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-1-tasking",
+    "branch": "course-1-day-05-priority-change",
     "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c1-project"
+    "c1-day-5-priority-change"
   ]
 }
