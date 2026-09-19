@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 2,
+    "code": "C2",
     "id": "freertos-communication-synchronization",
     "title": "FreeRTOS Communication and Synchronization"
   },
