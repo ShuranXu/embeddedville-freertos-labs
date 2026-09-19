@@ -6,6 +6,7 @@
 void app_main(void)
 {
     printf("EVIDENCE item=c3-day-15-event-groups status=starter\n");
+    fflush(stdout);
     /* TODO: Publish named readiness bits and demonstrate any, all, and two-of-three decisions. */
     /* Emit status=pass only after every published acceptance check succeeds. */
 }
