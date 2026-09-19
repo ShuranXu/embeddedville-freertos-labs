@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 2,
+    "code": "C2",
     "id": "freertos-communication-synchronization",
     "title": "FreeRTOS Communication and Synchronization"
   },
@@ -9,12 +11,12 @@
     "id": "c2-day-11-counting-semaphore",
     "kind": "lab",
     "dayLabel": "Day 11",
-    "title": "Counting semaphores"
+    "title": "Counting semaphore capacity"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-2-day-11-counting-semaphore",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
