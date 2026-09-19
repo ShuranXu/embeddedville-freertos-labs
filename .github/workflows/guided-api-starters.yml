@@ -35,11 +35,20 @@ jobs:
             idf.py build &&
             python "$IDF_PATH/tools/idf_tools.py" --non-interactive install qemu-xtensa &&
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
-            script -q -e -c "timeout --kill-after=5s 25s idf.py qemu"
-            qemu.log;
-            rc=$?;
-            { test "$rc" -eq 124 || test "$rc" -eq 137; } &&
-            grep -q "EVIDENCE" qemu.log
+            { idf.py qemu --gdb > qemu-process.log 2>&1 &
+            qemu_pid=$!;
+            sleep 3;
+            timeout --kill-after=5s 30s xtensa-esp32-elf-gdb -q -batch
+            build/embeddedville_freertos_project.elf
+            -ex "target remote :3333"
+            -ex "monitor system_reset"
+            -ex "thbreak app_main"
+            -ex "continue"
+            -ex "printf \"EVIDENCE QEMU reached app_main\\n\""
+            2>&1 | tee qemu.log;
+            rc=${PIPESTATUS[0]};
+            kill "$qemu_pid" 2>/dev/null || true;
+            test "$rc" -eq 0 && grep -q "EVIDENCE QEMU reached app_main" qemu.log; }
 
       - name: Publish boot evidence
         if: always()
