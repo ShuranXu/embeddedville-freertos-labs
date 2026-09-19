@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 4,
+    "code": "C4",
     "id": "freertos-reliability-low-power",
     "title": "FreeRTOS Reliability and Low-Power Systems"
   },
