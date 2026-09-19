@@ -18,6 +18,37 @@ jobs:
       matrix:
         branch:
           - course-1-tasking
+          - course-2-communication
+          - course-3-pipelines
+          - course-4-reliability
+          - course-1-day-01-led-task
+          - course-1-day-02-timed-counter
+          - course-1-day-03-core-affinity
+          - course-1-day-04-task-deletion
+          - course-1-day-05-priority-change
+          - course-1-day-06-periodic-timing
+          - course-1-day-07-dual-output
+          - course-2-day-08-queue-backpressure
+          - course-2-day-09-isr-queue-handoff
+          - course-2-day-10-binary-semaphore
+          - course-2-day-11-counting-semaphore
+          - course-2-day-12-uart-mutex
+          - course-2-day-13-priority-inheritance
+          - course-2-day-14-uart-logger
+          - course-3-day-15-event-groups
+          - course-3-day-16-task-notifications
+          - course-3-day-17-stream-message-buffers
+          - course-3-day-18-software-timers
+          - course-3-day-19-memory-policy
+          - course-3-day-20-interrupt-management
+          - course-3-day-21-idle-daemon
+          - course-4-day-22-tick-timing
+          - course-4-day-23-runtime-debugging
+          - course-4-day-24-power-policy
+          - course-4-day-25-system-integration
+          - course-4-day-26-runtime-trace
+          - course-4-days-27-28-recovery-performance
+          - course-4-days-29-30-sensor-hub-capstone
     steps:
       - name: Check out isolated starter
         uses: actions/checkout@v4
