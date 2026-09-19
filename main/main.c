@@ -6,6 +6,7 @@
 void app_main(void)
 {
     printf("EVIDENCE item=c4-day-23-runtime-debugging status=starter\n");
+    fflush(stdout);
     /* TODO: Measure task state and stack headroom under bounded, recoverable pressure—never a deliberate crash. */
     /* Emit status=pass only after every published acceptance check succeeds. */
 }
