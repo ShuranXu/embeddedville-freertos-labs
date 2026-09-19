@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 4,
+    "code": "C4",
     "id": "freertos-reliability-low-power",
     "title": "FreeRTOS Reliability and Low-Power Systems"
   },
@@ -14,7 +16,7 @@
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-4-day-25-system-integration",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
