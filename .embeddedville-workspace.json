@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 2,
+    "code": "C2",
     "id": "freertos-communication-synchronization",
     "title": "FreeRTOS Communication and Synchronization"
   },
@@ -9,12 +11,12 @@
     "id": "c2-day-14-uart-logger",
     "kind": "lab",
     "dayLabel": "Day 14",
-    "title": "UART event logger"
+    "title": "UART logger integration"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-2-day-14-uart-logger",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
