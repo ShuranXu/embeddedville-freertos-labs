@@ -2,6 +2,8 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
+    "number": 3,
+    "code": "C3",
     "id": "freertos-event-resource-pipelines",
     "title": "FreeRTOS Event and Resource Pipelines"
   },
@@ -14,7 +16,7 @@
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "course-3-day-17-stream-message-buffers",
-    "starterVersion": "2026.9.2",
+    "starterVersion": "2026.9-guided-api-labs-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
