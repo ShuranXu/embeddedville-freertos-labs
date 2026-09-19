@@ -64,11 +64,9 @@ jobs:
           command: >-
             idf.py set-target esp32 &&
             idf.py build &&
-            idf.py merge-bin -o flash_image.bin &&
             python "$IDF_PATH/tools/idf_tools.py" --non-interactive install qemu-xtensa &&
             . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
-            timeout 25s qemu-system-xtensa -nographic -machine esp32
-            -drive file=build/flash_image.bin,if=mtd,format=raw 2>&1 | tee qemu.log;
+            timeout 25s idf.py qemu 2>&1 | tee qemu.log;
             rc=${PIPESTATUS[0]};
             test "$rc" -eq 124 &&
             grep -q "EVIDENCE" qemu.log
