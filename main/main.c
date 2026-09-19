@@ -7,6 +7,7 @@
 void app_main(void)
 {
     printf("EVIDENCE item=c2-day-14-uart-logger status=starter\n");
+    fflush(stdout);
     /* TODO: Integrate queue handoff, finite buffers, mutex-protected records, overload, and recovery. */
     /* Emit status=pass only after every published acceptance check succeeds. */
 }
