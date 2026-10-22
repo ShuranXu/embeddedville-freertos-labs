@@ -2,15 +2,22 @@ name: Guided API starter acceptance
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - freertos-fault-tolerant-supervisor/**
+      - .github/workflows/guided-api-starters.yml
   push:
     branches: [main]
-    paths: [.github/workflows/guided-api-starters.yml]
+    paths:
+      - freertos-fault-tolerant-supervisor/**
+      - .github/workflows/guided-api-starters.yml
 
 permissions:
   contents: read
 
 jobs:
   build-and-simulate:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -49,6 +56,7 @@ jobs:
           - course-4-day-26-runtime-trace
           - course-4-days-27-28-recovery-performance
           - course-4-days-29-30-sensor-hub-capstone
+          - freertos-fault-tolerant-supervisor
     steps:
       - name: Check out isolated starter
         uses: actions/checkout@v4
@@ -88,3 +96,37 @@ jobs:
           name: ${{ matrix.branch }}-qemu
           path: qemu.log
           if-no-files-found: warn
+
+  validate-supervisor-source:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out proposed starter
+        uses: actions/checkout@v4
+
+      - name: Validate workspace identity and build in QEMU
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v6.0.3
+          target: esp32
+          path: freertos-fault-tolerant-supervisor
+          command: >-
+            tools/workspace-doctor.sh &&
+            idf.py set-target esp32 &&
+            idf.py build &&
+            python "$IDF_PATH/tools/idf_tools.py" --non-interactive install qemu-xtensa &&
+            . "$IDF_PATH/export.sh" >/dev/null 2>&1 &&
+            { idf.py qemu --gdb > qemu-process.log 2>&1 &
+            qemu_pid=$!;
+            sleep 3;
+            timeout --kill-after=5s 30s xtensa-esp32-elf-gdb -q -batch
+            build/embeddedville_freertos_project.elf
+            -ex "target remote :3333"
+            -ex "monitor system_reset"
+            -ex "thbreak app_main"
+            -ex "continue"
+            -ex "printf \"EVIDENCE QEMU reached app_main\\n\""
+            2>&1 | tee qemu.log;
+            rc=${PIPESTATUS[0]};
+            kill "$qemu_pid" 2>/dev/null || true;
+            test "$rc" -eq 0 && grep -q "EVIDENCE QEMU reached app_main" qemu.log; }

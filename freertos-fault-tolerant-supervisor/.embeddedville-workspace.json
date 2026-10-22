@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "provider": "github-codespaces",
+  "course": {
+    "id": "freertos-fault-tolerant-supervisor",
+    "title": "Fault-Tolerant FreeRTOS Supervisor"
+  },
+  "activity": {
+    "id": "frtsv-capstone",
+    "kind": "project",
+    "dayLabel": "Capstone",
+    "title": "Fault-Tolerant FreeRTOS Supervisor"
+  },
+  "workspace": {
+    "repository": "ShuranXu/embeddedville-freertos-labs",
+    "branch": "freertos-fault-tolerant-supervisor",
+    "starterVersion": "2026.10-supervisor-project-v1",
+    "devContainerPath": ".devcontainer/devcontainer.json",
+    "workingDirectory": "."
+  },
+  "activityScope": [
+    "frtsv-lab-policy",
+    "frtsv-lab-deadline",
+    "frtsv-lab-recovery",
+    "frtsv-lab-qemu",
+    "frtsv-lab-stretch",
+    "frtsv-capstone"
+  ]
+}
