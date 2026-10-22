@@ -1,6 +1,6 @@
 # EmbeddedVille FreeRTOS browser labs
 
-These are starter-only ESP-IDF v6.0.3 projects for the four independent
+These are starter-only ESP-IDF v6.0.3 projects for the independent
 EmbeddedVille FreeRTOS courses. Open this repository in GitHub Codespaces, choose
 the matching course directory, and implement the TODOs from its project brief.
 
@@ -10,6 +10,7 @@ the matching course directory, and implement the TODOs from its project brief.
 | 2 | `course-2-communication` | Interrupt-Driven UART Event Logger |
 | 3 | `course-3-pipelines` | Event-Driven Telemetry Pipeline |
 | 4 | `course-4-reliability` | Resilient Sleep-Aware Sensor Hub |
+| Project | `freertos-fault-tolerant-supervisor` | Fault-Tolerant FreeRTOS Supervisor |
 
 ## Use the browser lab
 
