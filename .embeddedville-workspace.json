@@ -2,25 +2,28 @@
   "schemaVersion": 2,
   "provider": "github-codespaces",
   "course": {
-    "number": 4,
-    "code": "C4",
-    "id": "freertos-reliability-low-power",
-    "title": "FreeRTOS Reliability and Low-Power Systems"
+    "id": "freertos-fault-tolerant-supervisor",
+    "title": "Fault-Tolerant FreeRTOS Supervisor"
   },
   "activity": {
-    "id": "c4-project",
+    "id": "frtsv-capstone",
     "kind": "project",
-    "dayLabel": "Final project",
-    "title": "Resilient Sleep-Aware Sensor Hub"
+    "dayLabel": "Capstone",
+    "title": "Fault-Tolerant FreeRTOS Supervisor"
   },
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
-    "branch": "course-4-reliability",
-    "starterVersion": "2026.9-guided-api-labs-v2",
+    "branch": "freertos-fault-tolerant-supervisor",
+    "starterVersion": "2026.10-supervisor-project-v1",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
   "activityScope": [
-    "c4-project"
+    "frtsv-lab-policy",
+    "frtsv-lab-deadline",
+    "frtsv-lab-recovery",
+    "frtsv-lab-qemu",
+    "frtsv-lab-stretch",
+    "frtsv-capstone"
   ]
 }

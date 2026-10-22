@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-"$(git rev-parse --show-toplevel)/tools/workspace-doctor.sh"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+"$root/tools/workspace-doctor.sh"
 
 if [[ -n "${IDF_PATH:-}" && -f "$IDF_PATH/export.sh" ]]; then
   # shellcheck disable=SC1090
