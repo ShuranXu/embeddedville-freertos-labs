@@ -22,7 +22,7 @@ expected = {
     "course": "freertos-fault-tolerant-supervisor",
     "activity": "frtsv-capstone",
     "branch": "freertos-fault-tolerant-supervisor",
-    "starter": "2026.10-supervisor-project-v1",
+    "starter": "2026.11-supervisor-project-v2",
 }
 actual = {
     "course": course.get("id"),
@@ -40,6 +40,8 @@ required = [
     "main/main.c",
     "main/supervisor.c",
     "main/supervisor.h",
+    "main/supervisor_events.c",
+    "main/recovery_async.c",
     "tests/public_policy_tests.c",
     "tools/build-and-run.sh",
     "tools/run-public-tests.sh",

@@ -14,7 +14,7 @@
   "workspace": {
     "repository": "ShuranXu/embeddedville-freertos-labs",
     "branch": "freertos-fault-tolerant-supervisor",
-    "starterVersion": "2026.10-supervisor-project-v1",
+    "starterVersion": "2026.11-supervisor-project-v2",
     "devContainerPath": ".devcontainer/devcontainer.json",
     "workingDirectory": "."
   },
