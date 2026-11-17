@@ -37,10 +37,24 @@ static void test_unsigned_wraparound(void)
     assert(sv_check(&supervisor, id, 1).action == SV_ACTION_RESTART);
 }
 
+static void test_stretch_scaffold_is_buildable(void)
+{
+    sv_event_queue_t queue;
+    sv_event_queue_init(&queue);
+    assert(queue.count == 0U);
+    assert(queue.dropped_newest == 0U);
+
+    sv_recovery_async_t recovery;
+    sv_recovery_async_init(&recovery);
+    assert(!recovery.active);
+    assert(sv_recovery_poll(&recovery, 0U) == SV_RECOVERY_PENDING);
+}
+
 int main(void)
 {
     test_basic_contract();
     test_unsigned_wraparound();
+    test_stretch_scaffold_is_buildable();
     puts("PUBLIC POLICY TESTS PASSED");
     return 0;
 }

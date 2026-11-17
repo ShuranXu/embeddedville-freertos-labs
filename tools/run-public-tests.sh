@@ -6,6 +6,8 @@ mkdir -p "$root/build-host"
 cc -std=c11 -Wall -Wextra -Wpedantic -Werror \
   -I"$root/main" \
   "$root/main/supervisor.c" \
+  "$root/main/supervisor_events.c" \
+  "$root/main/recovery_async.c" \
   "$root/tests/public_policy_tests.c" \
   -o "$root/build-host/public-policy-tests"
 "$root/build-host/public-policy-tests"

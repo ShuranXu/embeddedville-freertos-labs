@@ -5,6 +5,7 @@
 #include <stdint.h>
 
 #define SV_MAX_TASKS 8
+#define SV_EVENT_QUEUE_CAPACITY 8
 
 typedef enum {
     SV_HEALTHY = 0,
@@ -57,5 +58,43 @@ void sv_heartbeat(sv_supervisor_t *supervisor, int task_id, uint32_t generation,
 sv_event_t sv_check(sv_supervisor_t *supervisor, int task_id, uint32_t now_ms);
 void sv_recovery_completed(sv_supervisor_t *supervisor, int task_id, uint32_t now_ms);
 const char *sv_state_name(sv_state_t state);
+
+/* Optional Stretch Goal scaffold: bounded, drop-newest heartbeat events. */
+typedef struct {
+    int task_id;
+    uint32_t generation;
+    uint32_t observed_ms;
+} sv_heartbeat_event_t;
+
+typedef struct {
+    sv_heartbeat_event_t items[SV_EVENT_QUEUE_CAPACITY];
+    uint8_t head;
+    uint8_t count;
+    uint32_t dropped_newest;
+} sv_event_queue_t;
+
+void sv_event_queue_init(sv_event_queue_t *queue);
+bool sv_event_enqueue(sv_event_queue_t *queue, sv_heartbeat_event_t event);
+bool sv_event_dequeue(sv_event_queue_t *queue, sv_heartbeat_event_t *event);
+
+/* Optional Stretch Goal scaffold: non-blocking recovery begin/poll contract. */
+typedef enum {
+    SV_RECOVERY_PENDING = 0,
+    SV_RECOVERY_OK,
+    SV_RECOVERY_ERROR,
+    SV_RECOVERY_TIMEOUT,
+} sv_recovery_status_t;
+
+typedef struct {
+    bool active;
+    int task_id;
+    uint32_t generation;
+    uint32_t started_ms;
+    uint32_t timeout_ms;
+} sv_recovery_async_t;
+
+void sv_recovery_async_init(sv_recovery_async_t *recovery);
+sv_recovery_status_t sv_recovery_begin(sv_recovery_async_t *recovery, int task_id, uint32_t generation, uint32_t now_ms, uint32_t timeout_ms);
+sv_recovery_status_t sv_recovery_poll(sv_recovery_async_t *recovery, uint32_t now_ms);
 
 #endif

@@ -6,7 +6,7 @@ Capstone: `frtsv-capstone`
 
 Branch: `freertos-fault-tolerant-supervisor`
 
-Starter: `2026.10-supervisor-project-v1`
+Starter: `2026.11-supervisor-project-v2`
 
 Build a policy-driven supervisor for an ESP32 FreeRTOS application. You will make missed progress observable, allow cooperative recovery within a bounded budget, reject stale heartbeats, and request a system reset after the budget is exhausted.
 
@@ -30,10 +30,8 @@ The incomplete starter emits `status=starter` until the policy core is implement
 - The optional stretch work adds multiple workers, a bounded heartbeat queue, single-writer policy ownership, and non-blocking recovery callbacks. Stretch results never gate course completion.
 - Do not add credentials, protected tests, evaluator files, or copied solutions to this workspace.
 
-## Codespaces lifecycle and cost
+## EmbeddedVille workspace lifecycle
 
-A GitHub account, browser, network access, repository access, and available Codespaces quota are required. Quota, retention, storage, machine availability, and billing depend on the GitHub account or organization; Codespaces is not universally free.
+Launch or restore the workspace from the matching EmbeddedVille activity page. No GitHub account, separate cloud subscription, or payment method is required. Use the course controls to save a checkpoint before the session sleeps and to create the exact snapshot used for protected evaluation.
 
-Saving in the editor preserves a workspace file, but it is not the same as committing, exporting, or submitting. Closing the browser does not stop compute. Stopping and restarting normally preserves files under `/workspaces`; rebuilding can remove state outside that persistent area; deleting the Codespace or reaching its retention limit can remove unpushed work. Commit or export important work before rebuild or deletion, stop compute when finished, and keep forwarded ports private.
-
-If setup fails, rerun `tools/workspace-doctor.sh`. Preserve your edits before rebuilding. A wrong branch, stale starter, missing QEMU installation, denied repository permission, exhausted quota, or deleted session should be resolved from the course workspace page without replacing saved work blindly.
+If setup fails, rerun `tools/workspace-doctor.sh`. Preserve your edits in a checkpoint before rebuilding. A stale starter, missing toolchain component, or expired session should be recovered from the course workspace page without replacing saved work blindly.
